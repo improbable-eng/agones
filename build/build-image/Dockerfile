@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# ForceUpdate 12 -- change here if you need to force a rebuild
+# ForceUpdate 13 -- change here if you need to force a rebuild
 
 FROM debian:buster
 
@@ -45,7 +45,7 @@ RUN go get -u golang.org/x/tools/cmd/goimports
 RUN gcloud components update && gcloud components install app-engine-go
 
 # the kubernetes version for the file
-ENV KUBERNETES_VER 1.15.11
+ENV KUBERNETES_VER 1.18.1
 
 # overwrite kubectl as we want a specific version
 RUN curl -LO https://storage.googleapis.com/kubernetes-release/release/v${KUBERNETES_VER}/bin/linux/amd64/kubectl && \
